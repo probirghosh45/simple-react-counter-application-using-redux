@@ -1,17 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
+const Counter = ({id, count, incrementHandler,decrementHandler}) => {
 
-  //increment handler function
-  const incrementHandler = () => {
-    setCount((previousCount) => previousCount + 1);
-  };
 
-  //decrement handler function
-  const decrementHandler = () => {
-    setCount((previousCount) => previousCount - 1);
-  };
 
   return (
     <div>
@@ -20,13 +11,13 @@ const Counter = () => {
         <div class="flex space-x-3">
           <button
             class="bg-indigo-400 text-white px-3 py-2 rounded shadow"
-            onClick={incrementHandler}
+            onClick={()=>incrementHandler(id)}
           >
             Increment
           </button>
           <button
             class="bg-red-400 text-white px-3 py-2 rounded shadow"
-            onClick={decrementHandler}
+            onClick={()=>decrementHandler(id)}
           >
             Decrement
           </button>
