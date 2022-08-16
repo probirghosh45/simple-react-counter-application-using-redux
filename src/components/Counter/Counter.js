@@ -5,12 +5,11 @@ const Counter = () => {
     const [count,setCount]=useState(0);
 
     //increment handler function
-   
     const incrementHandler = () =>{
         setCount((previousCount)=>previousCount + 1)
     }
+
     //decrement handler function
-   
     const decrementHandler = () =>{
         setCount((previousCount)=>previousCount - 1)
     }
