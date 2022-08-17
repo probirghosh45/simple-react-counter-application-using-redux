@@ -12,8 +12,8 @@ function App() {
         </h1>
         <div class="max-w-md mx-auto mt-10 space-y-5">
           <Counter />
-          <Counter />
-          <Counter />
+          {/* <Counter /> */}
+          {/* <Counter /> */}
           <Stats count={10} />
         </div>
       </div>
