@@ -21,13 +21,13 @@ const decrementHandler = (value) =>{
         <div class="flex space-x-3">
           <button
             class="bg-indigo-400 text-white px-3 py-2 rounded shadow"
-            onClick={incrementHandler}
+            onClick={()=> incrementHandler(5)}
           >
             Increment
           </button>
           <button
             class="bg-red-400 text-white px-3 py-2 rounded shadow"
-            onClick={decrementHandler}
+            onClick={()=>decrementHandler(3)}
           >
             Decrement
           </button>
