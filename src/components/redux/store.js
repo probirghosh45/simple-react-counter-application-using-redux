@@ -1,6 +1,7 @@
-import { createStore } from "redux";
+import { createStore ,applyMiddleware } from "redux";
+import logger from "redux-logger";
 // import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./counter/counterReducer";
+// import counterReducer from "./counter/counterReducer";
 import rootReducer from "./rootReducer";
 
 const store = createStore(rootReducer); //createStore deprecated

@@ -32,7 +32,7 @@ const Counter = ({ count, increment, decrement, id }) => {
 const mapStateToProps = (state, ownProps) => {
   // console.log(ownProps);
   return {
-    count: state.counter.value,
+    count: state.value,
   };
 };
 
