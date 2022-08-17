@@ -1,7 +1,7 @@
 import { DECREMENT, INCREMENT } from "./actionTypes";
 
 const initialState = {
-    value : 0 ,
+    value : 225 ,
 }
 
 const counterReducer = (state = initialState , action) =>{

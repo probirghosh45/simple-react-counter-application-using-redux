@@ -1,9 +1,9 @@
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import { decrement, increment } from "../redux/counter/actions";
 
-const Counter = ({ count, increment, decrement, id }) => {
+const Counter = ({increment, decrement, id }) => {
 
-
+const count = useSelector((state)=>state.value)
 
   
   return (
@@ -35,12 +35,12 @@ const Counter = ({ count, increment, decrement, id }) => {
   );
 };
 
-const mapStateToProps = (state, ownProps) => {
-  // console.log(ownProps);
-  return {
-    count: state.value,
-  };
-};
+// const mapStateToProps = (state, ownProps) => {
+//   // console.log(ownProps);
+//   return {
+//     count: state.value,
+//   };
+// };
 
 const mapDispatchToProps = (dispatch) => {
   return {
