@@ -1,9 +1,11 @@
 import { Provider } from "react-redux";
+import Counter from "./components/Counter/Counter";
 import DynamicHooksCounter from "./components/DynamicHooksCounter/DynamicHooksCounter";
 // import Counter from "./components/Counter/Counter";
 import HooksCounter from "./components/HooksCounter/HooksCounter";
 import store from "./components/redux/store";
 import Stats from "./components/Stats/Stats";
+import VariableCounter from "./components/VariableCounter/VariableCounter";
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
         <div class="max-w-md mx-auto mt-10 space-y-5">
           <HooksCounter id={75} />
           <DynamicHooksCounter id={99} />
-          {/* <Counter id={75} /> */}
+          <Counter />
+          <VariableCounter dynamic/>
           {/* <Counter /> */}
           {/* <Counter /> */}
           {/* <Stats count={10} /> */}

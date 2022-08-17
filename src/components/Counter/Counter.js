@@ -10,12 +10,6 @@ const Counter = ({ count, increment, decrement, id }) => {
     <div>
       <div class="p-4 h-auto flex flex-col items-center justify-center space-y-5 bg-white rounded shadow">
         <div class="text-2xl font-semibold">{count}</div>
-
-        {/* <div class="text-2xl font-semibold">{id}</div> */}
-        {/* Counter Component এর নিজস্ব কোন props থাকতে পারে সেটাও সে একই সাথে রিসিভ করতে পারবে ,এমনকি 
-         এই props  mapStateToProps,mapDispatchToProps  function দুইটির কার্যক্রমে Effect ফেলতে পারে , ওই 
-         ফাংশনগুলো  এই props কে ownProps নামে parameter আকারে রিসিভ করবে ...এই  ownProps একটা Object*/}
-
         <div class="flex space-x-3">
           <button
             class="bg-indigo-400 text-white px-3 py-2 rounded shadow"
@@ -38,7 +32,7 @@ const Counter = ({ count, increment, decrement, id }) => {
 const mapStateToProps = (state, ownProps) => {
   // console.log(ownProps);
   return {
-    count: state.value,
+    count: state.counter.value,
   };
 };
 
