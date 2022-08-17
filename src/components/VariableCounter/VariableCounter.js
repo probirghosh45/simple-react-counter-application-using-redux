@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { decrement, increment } from "../redux/counter/actions";
 import { decrement as dynamicDecrement , increment as dynamicIncrement} from "../redux/counter/actions";
 
-const Counter = ({ count, increment, decrement, id }) => {
+const VariableCounter = ({ count, increment, decrement, id }) => {
 
 
 
@@ -50,4 +50,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(VariableCounter);
