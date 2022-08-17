@@ -11,7 +11,7 @@ function App() {
           Simple Counter Application
         </h1>
         <div class="max-w-md mx-auto mt-10 space-y-5">
-          <Counter />
+          <Counter id={75} />
           {/* <Counter /> */}
           {/* <Counter /> */}
           <Stats count={10} />
