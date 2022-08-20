@@ -1,7 +1,8 @@
 import { connect } from "react-redux";
 import { decrement, increment } from "../redux/counter/actions";
+import { decrement as dynamicDecrement , increment as dynamicIncrement} from "../redux/dynamicCounter/actions";
 
-const Counter = ({ count, increment, decrement, id }) => {
+const VariableCounter = ({ count, increment, decrement, id }) => {
 
 
 
@@ -30,17 +31,17 @@ const Counter = ({ count, increment, decrement, id }) => {
 };
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(ownProps);
+  console.log(ownProps);
   return {
-    count: state.value,
+    count: ownProps.dynamic ? state.dynamicCounter.value : state.counter.value
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    increment: (value) => dispatch(increment(value)),
-    decrement: (value) => dispatch(decrement(value)),
+    increment: ownProps.dynamic ? (value) =>  dispatch(dynamicIncrement(5)) : () =>  dispatch(increment()),
+    decrement: ownProps.dynamic ? (value) => dispatch(dynamicDecrement(3)) : () => dispatch(decrement()) ,
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(VariableCounter);
